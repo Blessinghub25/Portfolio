@@ -358,20 +358,15 @@
   .timeline { max-width: 720px; }
   .timeline-item {
     display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 110px 1fr;
+    gap: 2rem;
     padding-bottom: 2.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--border);
     position: relative;
+    margin-left: 110px;
   }
-  .timeline-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 148px;
-    top: 1.8rem;
-    bottom: 0;
-    width: 1px;
-    background: var(--border);
-  }
+  .timeline-item:last-child { border-left: 2px solid transparent; }
   .timeline-date {
     font-size: 0.78rem;
     font-weight: 600;
@@ -379,12 +374,16 @@
     text-align: right;
     padding-top: 0.15rem;
     line-height: 1.4;
+    position: absolute;
+    left: -125px;
+    top: 0;
+    width: 110px;
   }
   .timeline-dot {
     position: absolute;
-    left: 143px;
-    top: 0.5rem;
-    width: 11px; height: 11px;
+    left: -7px;
+    top: 0.35rem;
+    width: 10px; height: 10px;
     border-radius: 50%;
     background: var(--blue);
     border: 2px solid white;
